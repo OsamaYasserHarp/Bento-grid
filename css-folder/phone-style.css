@@ -1,0 +1,103 @@
+/* start phone system  */
+@media (max-width: 767px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		height: fit-content;
+	}
+	.one {
+		order: 7;
+	}
+	.two {
+		order: 1;	
+	}
+	.three {
+		order: 4;	
+	}
+	.four {
+		order: 8;
+	}
+	.five {
+		order: 2;
+	}
+	.six {
+		order: 3;
+	}
+	.seven {
+		order: 6;
+	}
+	.eight {
+		order: 5;
+	}
+	.attribution {
+		order: 9;
+	}
+}
+/* end phone system */
+/* start phone-style */
+@media (max-width: 768px) {
+	/* 1 = two */
+	main .container .two {
+	    padding: 20px;
+	}
+	/* 2 = five */
+	/* 3 = six */
+	main .container .six {
+	    flex-basis: 200px;
+	}
+	main .container .six p {
+	width: 80%;
+    font-size: 27px;
+	}
+	main .container .six img {
+	width: 60%;
+	}
+	/* 4 = three */
+	main .container .three{
+		padding: 20px;
+		text-align: center;
+	}
+	/* 5 = eight */
+	main .container .eight {
+		flex-direction: column;
+	    flex-direction: column;
+		text-align: center;
+	}
+	main .container .eight img {
+		width: 220px;
+		margin: auto;
+	}
+	main .container .eight p {
+		margin: 15px auto 0;
+		width: 65%;
+	}
+	/* 6 = seven */
+	main .container .seven p {
+	    font-size: 18px;
+		margin-bottom: 20px;
+	}
+	main .container .seven img {
+	    margin: 0;
+		transform: none;
+		width: 200px;
+	}
+	/* 7 = one */
+	main .container .one {
+	    flex-basis: 200px;
+		padding: 30px;	
+	}
+	main .container .one img {
+	    position: unset;
+		transform: unset;
+		width: 58%;
+	}
+	/* 8 = four */
+	main .container .four img {
+		margin: unset;
+		transform: unset;
+		padding-left: 23px;
+		padding-bottom: 23px;
+	}
+	/* 9 = attribution */
+}
+/* end phone-style */

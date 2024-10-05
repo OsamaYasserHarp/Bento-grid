@@ -1,0 +1,300 @@
+/* start variables */
+:root {
+	--Purple-100: hsl(254, 88%, 90%);
+	--Purple-500: hsl(256, 67%, 59%);
+	--Yellow-100: hsl(31, 66%, 93%);
+	--Yellow-500: hsl(39, 100%, 71%);
+	--White: hsl(0, 0%, 100%);
+	--Black: hsl(0, 0%, 7%);
+	--value-radus: 10px;
+	--background-color: rgb(245 245 245);
+}
+/* end variables */
+/* start components */
+.letter::first-letter {
+	text-transform: uppercase;
+}
+.letter {
+	line-height: 1;
+	letter-spacing: -2px;
+	font-size: 33px;
+}
+/* end components */
+/* start global rules */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'DMSans', sans-serif;
+	font-size: 18px;
+	background-color: var(--background-color);
+}
+/* mobile Screen */
+@media (max-width: 768px) {
+	.container {
+		width: 375px;
+	}
+}
+/* small Screen */
+@media (min-width: 767px) {
+	.container {
+		width: 750px;
+	}
+}
+/* medium Screen */
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+/* large Screen */
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: fit-content;
+}
+/* end global rules */
+/* start font-style */
+@font-face {
+  font-family: 'Rubik';
+  src: url('../font-file/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+}
+/* end font-style */
+/* start grid system */
+.container {
+	display: grid;
+	grid-template-columns: .18fr 1fr 1fr 1fr 1fr .18fr;
+	grid-template-rows: 0px repeat(3, 1fr) 2fr 1fr 0fr repeat(5, 1fr) 15px;
+	height: 100vh;
+	grid-gap: 37px;
+	grid-template-areas: 
+	". . . . . ."
+	". one two two three ."
+	". one two two three ."
+	". one two two three ."
+	". one two two three ."
+	". one five six three ."
+	". four five six three ."
+	". four five six three ."
+	". four five six three ."
+	". four seven eight eight ."
+	". four seven eight eight ."
+	". four seven eight eight ."
+	
+	". . footer footer . ."
+	;
+}
+@media (max-width: 991px) {
+	.container {
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-areas: 
+			". . . . . . . . . ."
+			"one one one two two two two three three three"
+			"one one one two two two two three three three"
+			"one one one two two two two three three three"
+			"one one one two two two two three three three"
+			"one one one five five six six three three three"
+			"four four four five five six six three three three"
+			"four four four five five six six three three three"
+			"four four four seven seven eight eight eight eight eight"
+			"four four four seven seven eight eight eight eight eight"
+			"four four four seven seven eight eight eight eight eight"
+			". . . . . . . . . ."
+			". . footer footer footer footer footer footer . ."
+			;
+	}
+}
+.one {
+	grid-area: one;
+}
+.two {
+	grid-area: two;
+}
+.three {
+	grid-area: three;
+}
+.four {
+	grid-area: four;
+}
+.five {
+	grid-area: five;
+}
+.six {
+	grid-area: six;
+}
+.seven {
+	grid-area: seven;
+}
+.eight {
+	grid-area: eight;
+}
+.attribution {
+	grid-area: footer;
+}
+/* end grid system */
+/* start style boxes */
+main .container .one {
+    background-color: var(--Yellow-100);
+    border-radius: var(--value-radus);
+    padding: 49px 0 0 20px;
+    font-size: 33px;
+    font-weight: 400;
+    letter-spacing: -2px;
+	line-height: .8;
+    position: relative;
+}
+main .container .one p span {
+    color: var(--Purple-500);
+    font-style: italic;
+}
+main .container .one > img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin-top: 20px;
+}
+main .container .two {
+	background-color: var(--Purple-500);
+    border-radius: var(--value-radus);
+    color: var(--White);
+	text-align: center;
+	padding-top: 10px;
+}
+main .container .two h1 {
+    font-weight: normal;
+	font-size: 45px;
+}
+main .container .two h1 span:first-of-type{
+	color: var(--Yellow-500);
+}
+main .container .two h1 span:last-of-type{
+	font-style: italic;
+}
+main .container .two img {
+	width: 150px;
+	margin-bottom: 4px;
+}
+main .container .two p {
+	font-size: 17px;
+}
+main .container .three {
+	overflow: hidden;
+    background-color: var(--Purple-100);
+    padding: 40px 30px;
+	border-radius: var(--value-radus);
+}
+main .container .three p:first-of-type {
+    margin-bottom: 20px;
+}
+main .container .three img {
+	width: 300px;
+}
+main .container .three p:last-of-type {
+    margin-top: 15px;
+    font-size: 17px;
+	letter-spacing: 1px;
+}
+main .container .four {
+    background-color: var(--Yellow-500);
+    border-radius: var(--value-radus);
+}
+main .container .four p {
+	padding: 23px;
+}
+main .container .four img {
+	width: 190px;
+    max-width: 100%;
+    margin-left: 50%;
+    transform: translatex(-47%);
+}
+main .container .five {
+    background-color: var(--White);
+    overflow: hidden;
+    border-radius: var(--value-radus);
+	
+}
+main .container .five >  img {
+    width: 292px;
+    padding: 20px;
+    padding-right: 0;
+}
+main .container .five p {
+	font-size: 85%;
+    padding: 0 15px;
+    width: 85%;
+}
+main .container .six {
+    background-color: var(--Yellow-500);
+    border-radius: var(--value-radus);
+    padding: 10px 15px;
+    overflow: hidden
+}
+main .container .six p {
+    width: 87%;
+    font-size: 30px;
+}
+main .container .six img {
+    width: 100%;
+    margin-top: 0.7em;
+}
+main .container .seven {
+    background-color: var(--White);
+    border-radius: var(--value-radus);
+    padding: 16px;
+    padding-bottom: 0;
+}
+main .container .seven > h6 {
+	font-size: 54px;
+}
+main .container .seven p {
+    font-size: 14px;
+    letter-spacing: normal;
+    margin: 20px 0;
+}
+main .container .seven img {
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+main .container .eight {
+    display: flex;
+    background-color: var(--Purple-500);
+    border-radius: var(--value-radus);
+    padding: 15px;
+    color: var(--White)
+}
+main .container .eight img {
+	flex-basis: 202px;
+}
+main .container .eight p {
+    margin-top: 50px;
+    font-size: 25px;
+}
+/* end style boxes */
+/* start footer */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	display: none;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    background-color: var(--Purple-100);
+    padding: 4px;
+    border-radius: 10px;
+}
+/* end footer */
